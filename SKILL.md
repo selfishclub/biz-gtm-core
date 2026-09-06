@@ -323,6 +323,9 @@ F 대표 상품 3개 · E 「보여줘도 되는 것」 2개 · 매장 또는 �
 - 소개글은 **B의 뒷칸 + C의 한 문장 + F의 사실 하나**로 짠다
 - 사용자가 고르고 고친다. 확정하지 않는다
 
+#### ⑥ 단 컷 소개 이미지
+한 장으로 "우리는 ___를 판다"가 보이는 이미지 하나. **내 사진이 있으면 사진 + AI 정리가 기본**, 없으면 AI 생성 3안. 글자는 넣지 않는다. 프롬프트 · 검수 5가지 · 채널별 규격은 `references/intro-image.md`. 결과는 04 파일의 「소개 이미지」 칸에 적는다.
+
 ---
 
 ### 8. 산출 — ChatGPT 프로젝트 파일 묶음
@@ -398,6 +401,7 @@ F 대표 상품 3개 · E 「보여줘도 되는 것」 2개 · 매장 또는 �
 | `references/hint-playbook.md` | **사용자가 막혔을 때** |
 | `references/facts-sheet-guide.md` | STEP 6. 말하면 안 되는 것 |
 | `references/content-direction.md` | STEP 7. 채널 우선순위 · 세 기둥 · **1주차 3개 · 촬영 리스트** · 4주 기본형 |
+| `references/intro-image.md` | STEP 7-⑥. 소개 이미지 프롬프트 · 검수 · 규격 |
 | `references/channel-setup-guide.md` | STEP 7~8. 플랫폼별 세팅 순서 · 화면이 다를 때 · ChatGPT 프로젝트 개설 · 네이버 플레이스 갱신 |
 | `references/project-files-template.md` | STEP 8. 여섯 파일 양식 |
 | `references/examples.md` | 예시를 요청하거나 감이 안 잡힐 때 |

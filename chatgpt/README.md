@@ -7,10 +7,10 @@
 ```
 ① ChatGPT → 왼쪽 「GPT 탐색」 → 오른쪽 위 「만들기」 (ChatGPT Plus 이상 필요)
 ② 「구성」 탭
-   - 이름: 우리 가게 GTM 코어
-   - 설명: 우리 가게가 누구의 무엇을 바꾸는지 20개 질문으로 적고, 마케팅 프로젝트 파일 6개를 만듭니다
+   - 이름: 비즈니스 GTM 코어
+   - 설명: 내 비즈니스가 누구의 무엇을 바꾸는지 20개 질문으로 적고, 마케팅 프로젝트 파일 6개를 만듭니다
    - 지침: 커스텀GPT_지침.md 내용을 전부 붙여넣기 (8,000자 이내로 맞춰져 있다)
-   - 대화 시작 문구: "우리 가게 GTM 코어 시작할게요" / "창업 준비 중인데 시작할게요"
+   - 대화 시작 문구: "비즈니스 GTM 코어 시작할게요" / "창업 준비 중인데 시작할게요"
 ③ 「지식」 → 파일 업로드: ../references/ 안의 9개 .md 전부
    (interview-guide · hint-playbook · facts-sheet-guide · content-direction · channel-setup-guide ·
     project-files-template · examples · next-steps · instructor-guide는 빼도 된다)
@@ -31,7 +31,7 @@
 ① ChatGPT → 「프로젝트」 → 「새 프로젝트」 → 이름: GTM 코어 인터뷰
 ② 「지침」에 커스텀GPT_지침.md 붙여넣기
 ③ 「파일」에 references/ 9개 업로드 (무료 계정 한도에 걸리면 interview-guide · hint-playbook · content-direction · project-files-template 4개만)
-④ 새 대화: "우리 가게 GTM 코어 시작할게요"
+④ 새 대화: "비즈니스 GTM 코어 시작할게요"
 ```
 
 이 방식은 참가자마다 15분이 든다. 커스텀 GPT가 기본이다.
@@ -42,7 +42,7 @@
 
 ## 4. 클로드로 리허설할 때
 
-`SKILL.md`가 원본 규격이다. 클로드 코드에서 `~/.claude/skills/gage-gtm-core`로 링크돼 있으면 "우리 가게 GTM 코어 잡아줘"로 발동한다. 강사가 질문 흐름을 점검할 때는 이쪽이 빠르다.
+`SKILL.md`가 원본 규격이다. 클로드 코드에서 `~/.claude/skills/biz-gtm-core`로 링크돼 있으면 "비즈니스 GTM 코어 잡아줘"로 발동한다. 강사가 질문 흐름을 점검할 때는 이쪽이 빠르다.
 
 ## 5. 두 버전을 함께 고치는 규칙
 

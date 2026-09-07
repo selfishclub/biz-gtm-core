@@ -54,7 +54,7 @@
 
 ### ChatGPT (수업 기본)
 
-강사가 `chatgpt/README.md`대로 커스텀 GPT를 만들어 링크를 공유합니다. 참가자는 링크만 열면 됩니다.
+참가자마다 ChatGPT 프로젝트 하나를 만들고, `chatgpt/프로젝트_지침.md`를 지침에 붙이고, `chatgpt/인터뷰_참조_묶음.md`를 파일로 올립니다. 인터뷰도, 산출 파일도, 2~4회차도 그 프로젝트 안에서 합니다. → `chatgpt/README.md`
 
 ### 클로드 앱 (데스크탑 · 웹)
 
@@ -97,8 +97,9 @@ references/channel-setup-guide.md     인스타 · 카카오채널 · 스레드 
 references/project-files-template.md  파일 여섯 개 양식
 references/examples.md                반찬가게 완성 예시 · 잘못 쓴 예
 references/instructor-guide.md        강사용 하루 타임라인 · 체크포인트
+references/research.md                [조사] 세 지점 · 규칙 · 리서치 숙제 프롬프트
 references/next-steps.md              2~4회차 연결 · 검증 숙제
-chatgpt/                              ChatGPT 커스텀 GPT 지침 · 설정 방법 (수업 배포용)
+chatgpt/                              ChatGPT 프로젝트 지침 · 참조 묶음 · 설정 방법 (수업 배포용)
 course/                               사전 설문 원고 · 설문 반영 기획 노트
 DESIGN.md                             왜 이렇게 기획했나
 biz-gtm-core.skill                   클로드 앱 업로드용 묶음

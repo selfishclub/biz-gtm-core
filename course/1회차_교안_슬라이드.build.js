@@ -51,7 +51,7 @@ function table(s, x, y, w, rows, colW, opt={}){
   s.addText('1회차', { x:0.6, y:1.3, w:6, h:0.8, fontFace:F, fontSize:20, color:'CFCFCF', isTextBox:true, margin:0 });
   s.addText('SNS 세팅 +\n우리 비즈니스에 맞는\nSNS 마케팅 전략 수립', { x:0.6, y:1.9, w:6.5, h:2.2, fontFace:F, fontSize:34, bold:true, color:C.white, isTextBox:true, margin:0, valign:'top' });
   s.addText('2026. 9. 7 (월) 09:30 – 17:30', { x:0.6, y:4.5, w:6, h:0.4, fontFace:F, fontSize:14, color:'CFCFCF', isTextBox:true, margin:0 });
-  s.addText('오늘 들고 나가는 것\n① 가치×페르소나 시트\n② 내 첫 스킬 (ChatGPT 프로젝트)\n③ 우리를 소개하는 이미지 한 장\n④ 첫 주 게시물 3개', { x:7.3, y:2.1, w:3.4, h:2.4, fontFace:F, fontSize:12.5, bold:false, color:C.white, isTextBox:true, margin:0, valign:'middle', paraSpaceAfter:3 });
+  s.addText('오늘 들고 나가는 것\n① 가치×페르소나 시트\n② 내 첫 스킬 (ChatGPT 프로젝트에 쌓인 파일)\n③ 우리를 소개하는 이미지 한 장\n④ 첫 주 게시물 3개', { x:7.3, y:2.1, w:3.4, h:2.4, fontFace:F, fontSize:12.5, bold:false, color:C.white, isTextBox:true, margin:0, valign:'middle', paraSpaceAfter:3 });
   s.addNotes('여러분 대부분 파는 게 있으세요. 오늘은 그걸 바꾸는 날이 아닙니다. 그게 누구의 무엇을 바꾸는지 적는 날이에요. 아직 문 안 여신 분, 정하는 중인 분도 같은 흐름으로 갑니다.');
 }
 statement('개념 ① 드릴과 구멍', '사람들은 드릴이 아니라,\n벽에 뚫린 구멍을 산다.', '손님이 사는 것은 상품이 아니라, 그 상품이 만드는 변화다.\n오늘 하는 일은 여러분의 드릴 옆에 구멍을 써넣는 것.',
@@ -88,9 +88,9 @@ statement('개념 ② AI는 데이터로 답한다', 'AI의 본질은\n무지막
   parts.forEach((p,i)=>{ const x=0.6+i*2.95; card(s,x,2.75,2.8,2.3,p[0],p[1]+'\n\nChatGPT에서는 → '+p[2],{num:String(i+1),ts:16,bs:12}); });
   s.addNotes('STIC은 좋은데 매번 네 줄 치는 건 힘들어요. 자기 상황을 글로 설명하는 것 자체가 어려운 분도 있어요. 그럴 때 쓰는 게 스킬이에요.');
 }
-{ const s = base(); header(s,'개념 ③ 스킬','오늘 만나는 스킬은 둘');
-  card(s,0.6,1.6,4.3,2.5,'커스텀 GPT 「비즈니스 GTM 코어」','강사가 만든 스킬\n20개 질문을 순서대로 던지고 파일 여섯 개를 만든다\nSTIC을 못 쓰는 분도 답만 하면 STIC이 적힌다\n\n→ 오전에 쓴다',{ts:15,bs:12.5});
-  card(s,5.1,1.6,4.3,2.5,'「(상호) 마케팅」 프로젝트','여러분이 만드는 내 첫 스킬\n우리 STIC이 든 지침 1 + 파일 5\n이 안에서는 "카드뉴스 써줘" 한 줄이면 된다\n\n→ 오후에 만든다',{fill:C.soft,ts:15,bs:12.5});
+{ const s = base(); header(s,'개념 ③ 스킬','스킬은 하나, 프로젝트도 하나 — 두 번 만난다');
+  card(s,0.6,1.6,4.3,2.5,'오전 — 지침이 질문한다','강사가 넣어드린 지침 + 참조 묶음\n20개 질문을 순서대로 던지고 파일 다섯 개를 만든다\nSTIC을 못 쓰는 분도 답만 하면 STIC이 적힌다\n\n→ 인터뷰 모드',{ts:15,bs:12.5});
+  card(s,5.1,1.6,4.3,2.5,'오후 — 파일이 쌓이면 동료가 된다','여러분 답이 파일 01~05로 같은 프로젝트에 올라간다\n같은 지침이 알아서 마케팅 모드로 바뀐다\n이 안에서는 "카드뉴스 써줘" 한 줄이면 된다\n\n→ 마케팅 모드',{fill:C.soft,ts:15,bs:12.5});
   s.addText('STIC을 직접 쓸 수 있으면 쓰고, 어려우면 스킬 안에서 한 줄만 친다. 어느 쪽이든 AI는 우리 맥락 위에서 답한다.', { x:0.6, y:4.3, w:8.8, h:0.4, fontFace:F, fontSize:13.5, bold:true, color:C.orange, isTextBox:true, margin:0 });
   s.addText('2회차 카드뉴스 스킬 → 3회차 이미지 스킬 → 4회차 릴스 스킬이 이 프로젝트 안에 쌓인다.', { x:0.6, y:4.75, w:8.8, h:0.4, fontFace:F, fontSize:12.5, color:C.mid, isTextBox:true, margin:0 });
 }
@@ -99,7 +99,7 @@ statement('개념 ② AI는 데이터로 답한다', 'AI의 본질은\n무지막
   card(s,5.1,1.6,4.3,3.3,'사실 시트가 있으면','말해도 되는 사실을 미리 적어둔다 (Situation)\n\n없는 건 [확인 필요]로 표시하게 지침에 넣는다 (Concern)\n\n2·3·4회차 검수가 전부 이 시트 기준',{fill:C.soft,ts:15,bs:13});
 }
 { const s = base(); header(s,'열기','오늘의 흐름 — 일곱 블록');
-  const blocks=[['1','열기','개념 넷 · GPT 열기'],['2','코어 인터뷰','A~F · 한 문장'],['3','한 달 방향','첫 주 3개 · 촬영 리스트'],['4','내 첫 스킬','파일 6 → 프로젝트'],['5','소개 이미지','한 장 · 검수 5'],['6','채널 세팅','인스타 · 카카오 · 플레이스'],['7','공유와 닫기','한 문장 낭독']];
+  const blocks=[['1','열기','개념 넷 · GPT 열기'],['2','코어 인터뷰','A~F · 한 문장'],['3','한 달 방향','첫 주 3개 · 촬영 리스트'],['4','내 첫 스킬','파일 5 → 같은 프로젝트'],['5','소개 이미지','한 장 · 검수 5'],['6','채널 세팅','인스타 · 카카오 · 플레이스'],['7','공유와 닫기','한 문장 낭독']];
   blocks.forEach((b,i)=>{ const col=i%4, row=Math.floor(i/4); const x=0.6+col*2.2, y=1.6+row*1.75; card(s,x,y,2.05,1.55,b[1],b[2],{num:b[0],ts:14,bs:11.5}); });
   s.addText('오전 = 블록 1~2\n오후 = 블록 3~7', { x:7.3, y:3.5, w:2.1, h:1.3, fontFace:F, fontSize:12, color:C.mid, isTextBox:true, margin:0, valign:'middle' });
 }
@@ -107,14 +107,14 @@ statement('개념 ② AI는 데이터로 답한다', 'AI의 본질은\n무지막
   const rules=['모르면 캡처해서 STIC 네 줄로 묻는다','모르겠다고 쳐도 된다. 빈칸은 다음 주 손님한테 물어볼 목록','AI 문장은 꼭 한 단어라도 사장님 말로 고친다','비밀번호 · 인증번호는 AI에게 절대 주지 않는다. 직접 친다','한 달 목표는 끊기지 않는 것. 주 1회','옆 사람이 막히면 "그래서 손님한테 뭐가 달라져요?" 한 번만'];
   rules.forEach((r,i)=>{ const y=1.6+i*0.58; circle(s,0.6,y,String(i+1),0.42,C.orange,C.white,13); s.addText(r,{x:1.2,y:y,w:8.2,h:0.42,fontFace:F,fontSize:14,color:C.ink,isTextBox:true,margin:0,valign:'middle'}); });
 }
-{ const s = base(true); header(s,'시작','커스텀 GPT 열기',true);
-  s.addShape(pres.ShapeType.roundRect,{x:0.6,y:1.7,w:3.0,h:3.0,fill:{color:C.white},line:{color:C.white},rectRadius:0.1});
-  s.addText('GPT 링크 QR\n(전날 삽입)',{x:0.6,y:1.7,w:3.0,h:3.0,fontFace:F,fontSize:14,color:C.mid,align:'center',valign:'middle',isTextBox:true,margin:0});
-  s.addText('시작 문구를 그대로 쳐주세요',{x:4.0,y:1.8,w:5.4,h:0.4,fontFace:F,fontSize:14,color:'CFCFCF',isTextBox:true,margin:0});
-  s.addText('"비즈니스 GTM 코어 시작할게요"',{x:4.0,y:2.3,w:5.4,h:0.6,fontFace:F,fontSize:20,bold:true,color:C.white,isTextBox:true,margin:0});
-  s.addText('창업 준비 중이면',{x:4.0,y:3.1,w:5.4,h:0.4,fontFace:F,fontSize:14,color:'CFCFCF',isTextBox:true,margin:0});
-  s.addText('"창업 준비 중인데 시작할게요"',{x:4.0,y:3.55,w:5.4,h:0.6,fontFace:F,fontSize:20,bold:true,color:C.white,isTextBox:true,margin:0});
-  s.addText('GPT가 첫 질문을 던지면 손 들어주세요',{x:4.0,y:4.4,w:5.4,h:0.4,fontFace:F,fontSize:13,color:C.orange,bold:true,isTextBox:true,margin:0});
+{ const s = base(true); header(s,'시작 · 10분','프로젝트 만들기 — 오늘 하나만',true);
+  const st=['ChatGPT 왼쪽 「프로젝트」 → 「새 프로젝트」 → 이름 「(상호) 마케팅」','「지침」 열기 → 단톡방의 지침 파일 내용 전부 붙여넣기 → 저장','「파일」 → 참조 묶음 파일 한 개 올리기','새 대화에 시작 문구'];
+  st.forEach((t,i)=>{ const y=1.55+i*0.62; circle(s,0.6,y+0.06,String(i+1),0.46,C.orange,C.white,14); s.addText(t,{x:1.25,y:y,w:5.2,h:0.58,fontFace:F,fontSize:14,color:C.white,isTextBox:true,margin:0,valign:'middle'}); });
+  s.addShape(pres.ShapeType.roundRect,{x:6.7,y:1.55,w:2.7,h:1.15,fill:{color:C.white},line:{color:C.white},rectRadius:0.08});
+  s.addText('"비즈니스 GTM 코어\n시작할게요"',{x:6.8,y:1.55,w:2.5,h:1.15,fontFace:F,fontSize:15,bold:true,color:C.ink,align:'center',valign:'middle',isTextBox:true,margin:0});
+  s.addShape(pres.ShapeType.roundRect,{x:6.7,y:2.85,w:2.7,h:1.15,fill:{color:C.soft},line:{color:C.soft},rectRadius:0.08});
+  s.addText('창업 준비 중이면\n"창업 준비 중인데 시작할게요"',{x:6.8,y:2.85,w:2.5,h:1.15,fontFace:F,fontSize:12.5,bold:true,color:C.ink,align:'center',valign:'middle',isTextBox:true,margin:0});
+  s.addText('첫 질문이 뜨면 손 들어주세요. 「프로젝트」 메뉴가 없으면 웹(chatgpt.com)으로.',{x:0.6,y:4.3,w:8.8,h:0.6,fontFace:F,fontSize:13,color:C.orange,bold:true,isTextBox:true,margin:0});
 }
 
 // ============ 코어 인터뷰 ============
@@ -126,6 +126,7 @@ statement('개념 ② AI는 데이터로 답한다', 'AI의 본질은\n무지막
 { const s = base(); header(s,'블록 2 · A 재료','재료는 새로 만드는 게 아니라 이미 쌓여 있는 말');
   const q=[['단골이 남한테 우리를 소개할 때 뭐라고 하나요?','손님 언어로 된 가치'],['처음 온 손님이 꼭 묻는 게 있어요?','Before. 묻는 건 불안한 것'],['한 번 오고 다시 안 오는 분들은 왜 안 올까요?','돌아선 사람의 말. 모르는 게 정상'],['리뷰에 반복되는 칭찬이나 불만이 있어요?','실제 문장. 가치 힌트']];
   q.forEach((it,i)=>{ const y=1.6+i*0.82; circle(s,0.6,y+0.1,String(i+1),0.45,C.orange,C.white,13); s.addText(it[0],{x:1.25,y:y,w:5.4,h:0.65,fontFace:F,fontSize:14,bold:true,color:C.ink,isTextBox:true,margin:0,valign:'middle'}); s.addText(it[1],{x:6.8,y:y,w:2.6,h:0.65,fontFace:F,fontSize:12,color:C.mid,isTextBox:true,margin:0,valign:'middle'}); });
+  s.addText('[조사] 소개 뒤에 상호로 한 번 검색해요. 이미 올라온 리뷰가 있으면 재료가 됩니다. 5분.', { x:0.6, y:4.95, w:8.8, h:0.35, fontFace:F, fontSize:12, color:C.orange, bold:true, isTextBox:true, margin:0 });
   s.addNotes('세 번째 질문은 대부분 모르세요. 모르는 게 정상이에요. 짐작으로 하나만 치고 넘어가세요. 그 빈칸이 오늘 숙제가 됩니다.');
 }
 { const s = base(); header(s,'블록 2 · A 재료','온라인이면 · 손님이 없으면');
@@ -169,7 +170,7 @@ statement('블록 2 · 되묻기 한 문장', '"그건 우리가 하는 일이�
 }
 { const s = base(); header(s,'블록 2 · F 사실 시트','오늘 유일하게 표를 통째로 — 생각이 아니라 기억이라서');
   bullets(s,0.6,1.6,4.2,3.2,['정식 상호 · 검색되는 이름','주소 · 찾아오는 법 · 주차 (온라인: 배송 · 소요일)','영업시간 · 휴무 (온라인: 주문 마감)','대표 상품 3개와 가격','원산지 · 인증 · 자격 — 증명 가능한 것만','시작한 연도. "거의 30년"은 안 된다','절대 하지 않는 것 — 사실인 것만'],13);
-  card(s,5.1,1.6,4.3,3.2,'말하면 안 되는 것','증명 못 하는 최초 · 최고 · 유일 · 1등\n효능 — 면역력 · 다이어트 · 피부 · 숙취\n다른 가게 비교 · 비하\n시트에 없는 숫자\n없는 후기',{fill:C.soft,ts:15,bs:13});
+  card(s,5.1,1.6,4.3,3.2,'말하면 안 되는 것 — [조사]로 찾는다','시트를 받으면 우리 업종 규정을 웹에서 찾아요\n예: "천연화장품"은 인증 기준 · "화학성분 없음"은 오인 표현\n\n공통: 최초 · 최고 · 유일 · 1등 · 효능 · 비교 · 시트에 없는 숫자 · 없는 후기',{fill:C.soft,ts:14,bs:12.5});
   s.addNotes('이게 없으면 AI가 30년 전통을 지어냅니다. 식품은 효능, 미용은 재생·탄력, 학원은 합격률, 운동은 감량 보장. 증명 못 하면 안 씁니다.');
 }
 
@@ -181,7 +182,7 @@ statement('블록 2 · 되묻기 한 문장', '"그건 우리가 하는 일이�
 }
 { const s = base(); header(s,'블록 3 · 채널','채널마다 역할이 다르다');
   table(s,0.6,1.6,8.8,[['채널','역할','오늘'],['네이버 플레이스 (이미 있음)','손님이 실제로 찾아오는 길','소개글만 갱신. 10분'],['인스타그램 비즈니스','처음 보는 사람이 발견하는 곳','이름 칸에 지역 + 업종. 프로필 문안'],['카카오톡 채널','한 번 온 사람에게 다시 말 걸기 · 재구매 알림','전원 신규 개설. 웰컴 메시지'],['스레드','사장님 말투로 짧게. 사진 없이 두 줄','선택. 안 올리던 분의 첫 습관']],[2.4,3.4,3.0],{fs:12.5,rowH:0.5,boldFirstCol:true});
-  s.addText('채널이 이미 4개 이상이면 — 한 달 손 안 댈 채널 하나를 고른다. 세팅이 아니라 정리.', { x:0.6, y:4.5, w:8.8, h:0.5, fontFace:F, fontSize:13, bold:true, color:C.orange, isTextBox:true, margin:0 });
+  s.addText('채널이 이미 4개 이상이면 — 한 달 손 안 댈 채널 하나를 고른다. 세팅이 아니라 정리.\n[조사] 손님이 실제로 칠 검색어 5개 · 앞으로 석 달의 계기 3개를 찾아 이름 칸과 4주 테마에 넣는다.', { x:0.6, y:4.4, w:8.8, h:0.75, fontFace:F, fontSize:12.5, bold:true, color:C.orange, isTextBox:true, margin:0 });
 }
 { const s = base(); header(s,'블록 3 · 세 기둥','아침에 적은 3층이 그대로 한 달 콘텐츠가 된다');
   const p=[['내가 파는 것','① 상품 · 공간','사실을 보여주는 사진 · 메뉴 · 공간 · 포장','3회차 이미지'],['사는 사람','② 손님의 변화','후기 · 전후 · "이런 분이 오세요"','2회차 카드뉴스'],['나라는 사람','③ 사장님','얼굴 · 손 · 작업 · 한마디','4회차 릴스']];
@@ -200,21 +201,21 @@ statement('블록 2 · 되묻기 한 문장', '"그건 우리가 하는 일이�
 }
 
 // ============ 내 첫 스킬 ============
-{ const s = base(); header(s,'블록 4 · 내 첫 스킬','파일 여섯 개 = 규칙 하나 + 재료 다섯');
-  table(s,0.6,1.6,8.8,[['파일','스킬의 어느 부분','가는 곳'],['00 프로젝트 지침','규칙 — 이렇게 하고 이건 하지 마라','「지침」'],['01 가치×페르소나 시트','재료 — 누구에게 무엇을','「파일」'],['02 사장님 보이스','재료 — 어떤 말투로 · 안 보여줄 것','「파일」'],['03 사실 시트','재료 — 말해도 되는 것','「파일」'],['04 채널 세팅','재료 — 채널별 문안 · 소개 이미지','「파일」'],['05 콘텐츠 방향','재료 — 첫 주 3개 · 촬영 리스트 · 2~4회차 출발점','「파일」']],[2.6,4.6,1.6],{fs:12,rowH:0.42,boldFirstCol:true});
-  s.addNotes('이게 여러분 첫 스킬이에요. 오전에 쓴 GPT는 제 거고, 이건 여러분 거예요. 내일부터 카드뉴스, 이미지, 릴스 전부 이 안에서 만듭니다.');
+{ const s = base(); header(s,'블록 4 · 내 첫 스킬','파일 다섯 개 = 재료. 규칙은 지침에 이미 있다');
+  table(s,0.6,1.6,8.8,[['파일','스킬의 어느 부분','가는 곳'],['(지침 — 오프닝에 붙인 것)','규칙 — 이렇게 하고 이건 하지 마라','「지침」 이미 있음'],['01 가치×페르소나 시트','재료 — 누구에게 무엇을','「파일」'],['02 사장님 보이스','재료 — 어떤 말투로 · 안 보여줄 것','「파일」'],['03 사실 시트','재료 — 말해도 되는 것','「파일」'],['04 채널 세팅','재료 — 채널별 문안 · 소개 이미지','「파일」'],['05 콘텐츠 방향','재료 — 첫 주 3개 · 촬영 리스트 · 2~4회차 출발점','「파일」']],[2.6,4.6,1.6],{fs:12,rowH:0.42,boldFirstCol:true});
+  s.addNotes('이제 이 프로젝트가 여러분 첫 스킬이에요. 오전엔 제 지침이 질문했고, 지금 올린 다섯 파일은 여러분 답이에요. 파일이 올라가면 같은 지침이 알아서 마케팅 동료로 바뀝니다.');
 }
-{ const s = base(); header(s,'블록 4 · ChatGPT 프로젝트 개설','다섯 단계');
-  const st=['ChatGPT 왼쪽 「프로젝트」 → 「새 프로젝트」','이름: 「(상호) 마케팅」','「지침」 열기 → 00 파일 내용 전부 붙여넣기 → 저장','「파일」 → 01~05 다섯 개 업로드','프로젝트 안에서 새 대화 → 테스트 질문'];
+{ const s = base(); header(s,'블록 4 · 같은 프로젝트에 올리기','세 단계');
+  const st=['인터뷰가 만든 01~05 다섯 파일을 내려받는다','지금 이 프로젝트 → 「파일」 → 다섯 개 업로드','새 대화 → 테스트 질문. 올라가면 지침이 스스로 마케팅 모드로 바뀐다'];
   st.forEach((t,i)=>{ const y=1.6+i*0.6; circle(s,0.6,y+0.05,String(i+1),0.45,C.orange,C.white,13); s.addText(t,{x:1.25,y:y,w:5.0,h:0.55,fontFace:F,fontSize:14,color:C.ink,isTextBox:true,margin:0,valign:'middle'}); });
   s.addShape(pres.ShapeType.roundRect,{x:6.5,y:1.6,w:2.9,h:3.0,fill:{color:C.card},line:{color:C.card},rectRadius:0.08});
   s.addText('화면 캡처\n(전날 최신 화면으로)',{x:6.5,y:1.6,w:2.9,h:3.0,fontFace:F,fontSize:12,color:C.mid,align:'center',valign:'middle',isTextBox:true,margin:0});
-  s.addText('무료 계정에서 파일이 다 안 올라가면 01 · 02 · 03 먼저. 04 · 05는 대화에 첨부.', { x:0.6, y:4.7, w:8.8, h:0.4, fontFace:F, fontSize:12.5, color:C.mid, isTextBox:true, margin:0 });
+  s.addText('무료 계정에서 한도에 걸리면 참조 묶음을 지우고 올린다. 인터뷰는 끝났으니 없어도 된다.', { x:0.6, y:4.7, w:8.8, h:0.4, fontFace:F, fontSize:12.5, color:C.mid, isTextBox:true, margin:0 });
 }
 { const s = base(); header(s,'블록 4 · 테스트','전원 같은 질문 하나');
   s.addShape(pres.ShapeType.roundRect,{x:0.6,y:1.6,w:8.8,h:0.9,fill:{color:C.dark},line:{color:C.dark},rectRadius:0.08});
   s.addText('"우리를 손님 말로 세 줄만 소개해줘"',{x:0.8,y:1.6,w:8.4,h:0.9,fontFace:F,fontSize:20,bold:true,color:C.white,isTextBox:true,margin:0,valign:'middle'});
-  table(s,0.6,2.75,8.8,[['결과','뜻','조치'],['시트 안의 사실 · 사장님 말투 · 손님 말','정상','끝'],['"30년 전통" · 시트에 없는 숫자','지침이 안 붙었거나 03이 안 올라감','지침 · 03 확인'],['광고체 · 이모지 남발','02가 안 읽힘','02 업로드 확인'],['다른 손님에게 말함','01이 안 읽힘','01 업로드 확인']],[3.4,3.2,2.2],{fs:12,rowH:0.4});
+  table(s,0.6,2.75,8.8,[['결과','뜻','조치'],['시트 안의 사실 · 사장님 말투 · 손님 말','정상','끝'],['"30년 전통" · 시트에 없는 숫자','03이 안 올라감','03 확인'],['여전히 인터뷰 질문을 함','파일 이름이 다르거나 덜 올라감','01~05 파일명 확인'],['광고체 · 이모지 남발','02가 안 읽힘','02 업로드 확인'],['다른 손님에게 말함','01이 안 읽힘','01 업로드 확인']],[3.4,3.2,2.2],{fs:12,rowH:0.4});
 }
 
 // ============ 소개 이미지 ============
@@ -284,7 +285,7 @@ statement('블록 7 · 닫기', '오늘 세운 건\n오늘 기준의 답입니�
   s.addText('퇴장 전 — 파일 여섯 개 위치 · 프로젝트 이름 · 소개 이미지 저장 · 촬영 리스트 캡처', { x:0.6, y:4.8, w:8.8, h:0.4, fontFace:F, fontSize:12.5, color:C.mid, isTextBox:true, margin:0 });
 }
 { const s = base(); header(s,'블록 7 · 닫기','스킬이 쌓인다');
-  const st=[['1회차','비즈니스 GTM 코어','지침 1 + 파일 5 · 소개 이미지'],['2회차','카드뉴스 스킬','재사용 카드뉴스'],['3회차','이미지 프롬프트 스킬','용도별 이미지 4종'],['4회차','릴스 기획 스킬','완성 릴스 1편']];
+  const st=[['1회차','비즈니스 GTM 코어','파일 5 · 소개 이미지'],['2회차','카드뉴스 스킬','재사용 카드뉴스'],['3회차','이미지 프롬프트 스킬','용도별 이미지 4종'],['4회차','릴스 기획 스킬','완성 릴스 1편']];
   st.forEach((it,i)=>{ const x=0.6+i*2.2; card(s,x,1.7,2.05,2.4,null,null,{fill:i==0?C.soft:C.card}); circle(s,x+0.2,1.9,String(i+1),0.5,i==0?C.orange:C.dark,C.white,15); s.addText(it[0],{x:x+0.85,y:1.9,w:1.1,h:0.5,fontFace:F,fontSize:12,color:C.mid,isTextBox:true,margin:0,valign:'middle'}); s.addText(it[1],{x:x+0.2,y:2.55,w:1.7,h:0.7,fontFace:F,fontSize:14,bold:true,color:C.ink,isTextBox:true,margin:0}); s.addText(it[2],{x:x+0.2,y:3.3,w:1.7,h:0.7,fontFace:F,fontSize:11.5,color:C.mid,isTextBox:true,margin:0}); if(i<3) s.addShape(pres.ShapeType.rightArrow,{x:x+2.05,y:2.75,w:0.15,h:0.3,fill:{color:C.line},line:{color:C.line}}); });
   s.addText('전부 오늘 만든 마케팅 프로젝트 안에 파일로 들어간다. 4회 끝나면 AI가 우리를 단골처럼 아는 상태.', { x:0.6, y:4.4, w:8.8, h:0.6, fontFace:F, fontSize:14, bold:true, color:C.orange, isTextBox:true, margin:0 });
 }
